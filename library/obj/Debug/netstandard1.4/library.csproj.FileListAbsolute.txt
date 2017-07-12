@@ -1,0 +1,6 @@
+/Users/dimi/Documents/Code/poker/library/bin/Debug/netstandard1.4/library.deps.json
+/Users/dimi/Documents/Code/poker/library/bin/Debug/netstandard1.4/library.dll
+/Users/dimi/Documents/Code/poker/library/bin/Debug/netstandard1.4/library.pdb
+/Users/dimi/Documents/Code/poker/library/obj/Debug/netstandard1.4/library.AssemblyInfo.cs
+/Users/dimi/Documents/Code/poker/library/obj/Debug/netstandard1.4/library.dll
+/Users/dimi/Documents/Code/poker/library/obj/Debug/netstandard1.4/library.pdb

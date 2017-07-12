@@ -1,0 +1,10 @@
+/Users/dimi/Documents/Code/poker/app/bin/Debug/netcoreapp1.1/app.deps.json
+/Users/dimi/Documents/Code/poker/app/bin/Debug/netcoreapp1.1/app.runtimeconfig.json
+/Users/dimi/Documents/Code/poker/app/bin/Debug/netcoreapp1.1/app.runtimeconfig.dev.json
+/Users/dimi/Documents/Code/poker/app/obj/Debug/netcoreapp1.1/app.AssemblyInfo.cs
+/Users/dimi/Documents/Code/poker/app/bin/Debug/netcoreapp1.1/app.dll
+/Users/dimi/Documents/Code/poker/app/bin/Debug/netcoreapp1.1/app.pdb
+/Users/dimi/Documents/Code/poker/app/bin/Debug/netcoreapp1.1/library.dll
+/Users/dimi/Documents/Code/poker/app/bin/Debug/netcoreapp1.1/library.pdb
+/Users/dimi/Documents/Code/poker/app/obj/Debug/netcoreapp1.1/app.dll
+/Users/dimi/Documents/Code/poker/app/obj/Debug/netcoreapp1.1/app.pdb

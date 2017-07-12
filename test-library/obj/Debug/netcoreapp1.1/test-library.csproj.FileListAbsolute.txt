@@ -1,0 +1,13 @@
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/xunit.runner.utility.netstandard15.dll
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/xunit.runner.reporters.netstandard15.dll
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/test-library.deps.json
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/test-library.runtimeconfig.json
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/test-library.runtimeconfig.dev.json
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/test-library.dll
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/test-library.pdb
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/library.dll
+/Users/dimi/Documents/Code/poker/test-library/bin/Debug/netcoreapp1.1/library.pdb
+/Users/dimi/Documents/Code/poker/test-library/obj/Debug/netcoreapp1.1/test-library.AssemblyInfo.cs
+/Users/dimi/Documents/Code/poker/test-library/obj/Debug/netcoreapp1.1/test-library.dll
+/Users/dimi/Documents/Code/poker/test-library/obj/Debug/netcoreapp1.1/test-library.pdb
