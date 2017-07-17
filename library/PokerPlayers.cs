@@ -5,16 +5,16 @@ using System.Linq;
 public class PokerPlayers : Players
 {
     private List<Player> players;
-    int maxPlayers;
-    public PokerPlayers()
+    int _maxPlayers;
+    public PokerPlayers(int max)
     {
         players = new List<Player>();
-        maxPlayers = 2;
+        _maxPlayers = max;
     }
 
     public void AddPlayer(Player player)
     {
-        if (players.Count() < maxPlayers)
+        if (players.Count() < _maxPlayers)
         {
             players.Add(player);
         }

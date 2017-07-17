@@ -4,13 +4,13 @@ using Xunit;
 
 namespace TestApp
 {
-    public class PlayerShould
+    public class PlayersShould
     {
         private PokerPlayers players;
 
-        public PlayerShould()
+        public PlayersShould()
         {
-            players = new PokerPlayers();
+            players = new PokerPlayers(2);
         }
 
         [Fact]
@@ -39,6 +39,20 @@ namespace TestApp
             players.AddPlayer(new DummyPlayer("Test2"));
             players.AddPlayer(new DummyPlayer("Test3"));
             players.Players().Should().NotContain(p => p.Name == "Test3");
+        }
+
+        [Fact]
+        public void GameWithSixPlayersContainsSix()
+        {
+            players = new PokerPlayers(6);
+
+            players.AddPlayer(new DummyPlayer("Test1"));
+            players.AddPlayer(new DummyPlayer("Test2"));
+            players.AddPlayer(new DummyPlayer("Test3"));
+            players.AddPlayer(new DummyPlayer("Test4"));
+            players.AddPlayer(new DummyPlayer("Test5"));
+            players.AddPlayer(new DummyPlayer("Test6"));
+            players.Players().Should().HaveCount(6);
         }
 
         private class DummyPlayer : Player

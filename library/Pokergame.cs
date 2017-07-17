@@ -5,26 +5,28 @@ namespace Library
 {
     public class Pokergame
     {
-        private Players players;
-        private Player player;
+        private readonly Players _players;
+        private readonly int _maxPlayers;
+        //private Player player;
 
         public Pokergame()
         {
-            players = new PokerPlayers();
+            _maxPlayers = 2;
+            _players = new PokerPlayers(_maxPlayers);
         }
 
         public Players Players
         {
             get
             {
-                return players;
+                return _players;
             }
         }
 
         public void AddPlayer(string playerName)
         {
 
-            players.AddPlayer(CreateNewPlayer(playerName));
+            _players.AddPlayer(CreateNewPlayer(playerName));
         }
 
         private Player CreateNewPlayer(string name)
