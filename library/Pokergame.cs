@@ -3,16 +3,16 @@ using static Newtonsoft.Json.JsonConvert;
 
 namespace Library
 {
-    public class Pokergame
+    public class Pokergame : Game
     {
         private readonly Players _players;
         private readonly int _maxPlayers;
         //private Player player;
 
-        public Pokergame()
+        public Pokergame(Players players)
         {
             _maxPlayers = 2;
-            _players = new PokerPlayers(_maxPlayers);
+            _players = players;
         }
 
         public Players Players
@@ -31,6 +31,7 @@ namespace Library
 
         private Player CreateNewPlayer(string name)
         {
+
             return new PokerPlayer(name);
         }
     }

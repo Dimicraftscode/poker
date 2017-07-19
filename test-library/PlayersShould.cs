@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using FluentAssertions;
 using Xunit;
 
@@ -6,53 +7,61 @@ namespace TestApp
 {
     public class PlayersShould
     {
-        private PokerPlayers players;
+        private Players _players;
 
         public PlayersShould()
         {
-            players = new PokerPlayers(2);
+            _players = new PokerPlayers(2);
         }
 
         [Fact]
         public void PlayersCanBeCreated()
         {
-            players.Should().NotBeNull();
+            _players.Should().NotBeNull();
         }
 
         [Fact]
         public void NewgameHasNoPlayers()
         {
-            players.Players().Should().HaveCount(0);
+            _players.Players().Should().HaveCount(0);
         }
 
         [Fact]
         public void PlayerJoinsGameWithNoPlayersGameHasTwoPlayers()
         {
-            players.AddPlayer(new DummyPlayer("Test"));
-            players.Players().Should().Contain(p => p.Name == "Test");
+            _players.AddPlayer(new DummyPlayer("Test"));
+            _players.Players().Should().Contain(p => p.Name == "Test");
         }
 
         [Fact]
         public void GameWithTwoPlayersCannotJoinThird()
         {
-            players.AddPlayer(new DummyPlayer("Test1"));
-            players.AddPlayer(new DummyPlayer("Test2"));
-            players.AddPlayer(new DummyPlayer("Test3"));
-            players.Players().Should().NotContain(p => p.Name == "Test3");
+            _players.AddPlayer(new DummyPlayer("Test1"));
+            _players.AddPlayer(new DummyPlayer("Test2"));
+            _players.AddPlayer(new DummyPlayer("Test3"));
+            _players.Players().Should().NotContain(p => p.Name == "Test3");
         }
 
         [Fact]
         public void GameWithSixPlayersContainsSix()
         {
-            players = new PokerPlayers(6);
+            _players = new PokerPlayers(6);
 
-            players.AddPlayer(new DummyPlayer("Test1"));
-            players.AddPlayer(new DummyPlayer("Test2"));
-            players.AddPlayer(new DummyPlayer("Test3"));
-            players.AddPlayer(new DummyPlayer("Test4"));
-            players.AddPlayer(new DummyPlayer("Test5"));
-            players.AddPlayer(new DummyPlayer("Test6"));
-            players.Players().Should().HaveCount(6);
+            _players.AddPlayer(new DummyPlayer("Test1"));
+            _players.AddPlayer(new DummyPlayer("Test2"));
+            _players.AddPlayer(new DummyPlayer("Test3"));
+            _players.AddPlayer(new DummyPlayer("Test4"));
+            _players.AddPlayer(new DummyPlayer("Test5"));
+            _players.AddPlayer(new DummyPlayer("Test6"));
+            _players.Players().Should().HaveCount(6);
+        }
+
+        [Fact]
+        public void AddAndRemovePlayerCountShouldBeZero()
+        {
+            _players.AddPlayer(new DummyPlayer("Test1"));
+            _players.RemovePlayer(_players.Players().Take(1).First());
+            _players.Players().Should().HaveCount(0);
         }
 
         private class DummyPlayer : Player

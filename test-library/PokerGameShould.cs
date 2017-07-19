@@ -1,23 +1,27 @@
 using Library;
 using Xunit;
 using System.Collections.Generic;
+using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 using FluentAssertions;
+using System;
+using Moq;
 
 namespace TestApp
 {
     public class PokergameShould
     {
-        private Pokergame game;
+        private Game _game;
         public PokergameShould()
         {
-            game = new Pokergame();
+            var players = new Mock<Players>();
+            _game = new Pokergame(players.Object);
         }
 
         [Fact]
         public void TestGame()
         {
-            game.Should().NotBeNull();
+            _game.Should().NotBeNull();
         }
 
         
