@@ -15,7 +15,8 @@ namespace TestApp
         public PokergameShould()
         {
             var players = new Mock<Players>();
-            _game = new Pokergame(players.Object);
+            var player = new Mock<Player>();
+            _game = new Pokergame(players.Object, player.Object);
         }
 
         [Fact]

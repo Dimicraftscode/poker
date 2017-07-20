@@ -80,6 +80,11 @@ namespace TestApp
                     return name;
                 }
             }
+
+            public Player Create(string name)
+            {
+                return new DummyPlayer(name);
+            }
         }
     }
 }

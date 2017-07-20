@@ -16,4 +16,9 @@ public class PokerPlayer : Player
             return name;
         }
     }
+
+    public Player Create(string name)
+    {
+        return new PokerPlayer(name);
+    }
 }

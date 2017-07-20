@@ -1,5 +1,9 @@
-public interface Pokerhand
+namespace Library
 {
-    void CollectMoney();
-     
+    public interface Hand
+    {
+        void CollectMoney();
+
+        Action Next();
+    }
 }

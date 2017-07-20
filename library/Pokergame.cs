@@ -7,12 +7,13 @@ namespace Library
     {
         private readonly Players _players;
         private readonly int _maxPlayers;
-        //private Player player;
+        private readonly Player _player;
 
-        public Pokergame(Players players)
+        public Pokergame(Players players, Player player)
         {
             _maxPlayers = 2;
             _players = players;
+            _player = player;
         }
 
         public Players Players
@@ -32,7 +33,7 @@ namespace Library
         private Player CreateNewPlayer(string name)
         {
 
-            return new PokerPlayer(name);
+            return _player.Create(name);
         }
     }
 }
