@@ -6,21 +6,23 @@ using System.Linq;
 
 namespace TestApp
 {
-    public class DealCardsShould
+    public class DealOneCardShould
     {
         [Fact]
         public void BeInstantiated()
         {
-            var dealCards = new DealCards();
+            var dealer = new Mock<Dealer>();
+            var dealCards = new DealOneCard(dealer.Object);
             dealCards.Should().NotBeNull();
         }
 
         [Fact]
-        public void DealACardToEveryOne()
+        public void DealOneCardToEveryOne()
         {
             var players = new Mock<Players>();
+            var dealer = new Mock<Dealer>();
             //create some cardcount output on playersMock
-            var dealCards = new DealCards();
+            var dealCards = new DealOneCard(dealer.Object);
             //make sure this deals one card to every player
             dealCards.Act();
             //check players have card to be all one
