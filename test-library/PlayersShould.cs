@@ -64,38 +64,5 @@ namespace TestApp
             _players.RemovePlayer(_players.Players().Take(1).First());
             _players.Players().Should().HaveCount(0);
         }
-
-        private class DummyPlayer : Player
-        {
-            private readonly string name;
-
-            public DummyPlayer(string name)
-            {
-                this.name = name;
-            }
-
-            public string Name
-            {
-                get
-                {
-                    return name;
-                }
-            }
-
-            public void AddCard(Card card)
-            {
-                throw new NotImplementedException();
-            }
-
-            public Player Create(string name)
-            {
-                return new DummyPlayer(name);
-            }
-
-            public Card ShowCard()
-            {
-                throw new NotImplementedException();
-            }
-        }
     }
 }
