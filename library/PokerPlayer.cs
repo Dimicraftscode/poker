@@ -1,8 +1,10 @@
 using System;
+using Library;
 
 public class PokerPlayer : Player
 {
     private readonly string name;
+    private Card _card;
 
     public PokerPlayer(string name)
     {
@@ -20,5 +22,14 @@ public class PokerPlayer : Player
     public Player Create(string name)
     {
         return new PokerPlayer(name);
+    }
+
+    public void AddCard(Card card){
+        _card = card;
+    }
+
+    public Card ShowCard()
+    {
+        return _card;
     }
 }

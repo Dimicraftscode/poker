@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using FluentAssertions;
+using Library;
 using Xunit;
 
 namespace TestApp
@@ -81,9 +82,19 @@ namespace TestApp
                 }
             }
 
+            public void AddCard(Card card)
+            {
+                throw new NotImplementedException();
+            }
+
             public Player Create(string name)
             {
                 return new DummyPlayer(name);
+            }
+
+            public Card ShowCard()
+            {
+                throw new NotImplementedException();
             }
         }
     }

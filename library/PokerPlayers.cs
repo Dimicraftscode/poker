@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Library;
 
 public class PokerPlayers : Players
 {
@@ -28,5 +29,15 @@ public class PokerPlayers : Players
     public void RemovePlayer(Player player)
     {
         players.Remove(player);
+    }
+
+    public void All(Action<Player> pred)
+    {
+        players.ForEach(pred);
+    }
+
+    public Card ShowCard()
+    {
+        throw new NotImplementedException();
     }
 }

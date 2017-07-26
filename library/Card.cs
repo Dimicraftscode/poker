@@ -1,4 +1,6 @@
-namespace Library{
-    public interface Card{
+namespace Library
+{
+    public interface Card
+    {
     }
 }
