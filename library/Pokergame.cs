@@ -6,12 +6,10 @@ namespace Library
     public class Pokergame : Game
     {
         private readonly Players _players;
-        private readonly int _maxPlayers;
         private readonly Player _player;
 
         public Pokergame(Players players, Player player)
         {
-            _maxPlayers = 2;
             _players = players;
             _player = player;
         }
